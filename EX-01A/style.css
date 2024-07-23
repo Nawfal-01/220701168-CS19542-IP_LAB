@@ -5,3 +5,8 @@
 body{
     background-color:antiquewhite;
 }
+.im{
+    border: 1px; 
+    height:200px;
+    width:200px;
+}
