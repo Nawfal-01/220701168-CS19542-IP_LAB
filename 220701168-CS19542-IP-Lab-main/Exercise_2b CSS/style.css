@@ -1,0 +1,51 @@
+.one{
+    display:flex;
+    align-items: center;
+}
+.two{
+    padding-left: 30px;
+}
+.p{
+    padding-left: 275px;
+    color: black;
+}
+.h1 {
+    color: black;
+    text-shadow: 3px 3px 6px palevioletred;
+    transform: translateX(-100%);
+    animation: slideIn 2s forwards;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+.abt{
+    display:flex;
+    
+}
+
+.dept{
+    transition: background-color 3s ease;
+}
+.dept:hover{
+  
+   background-color: purple;
+}
+.rec{
+
+    padding-left: 350px;
+}
+.rec img{
+    width:800px;
+    height:auto;
+    transition:transform 3s ease;
+}
+.rec img:hover{
+    transform:scaleX(1.25);
+}

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AJAX and JDBC Example</title>
+    <script>
+        function sendData() {
+            const xhr = new XMLHttpRequest();
+            xhr.open("POST", "DatabaseServlet", true);
+            xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    document.getElementById("response").innerText = xhr.responseText;
+                }
+            };
+
+            // Send some sample data
+            const data = "name=John&age=30";
+            xhr.send(data);
+        }
+    </script>
+</head>
+<body>
+    <h2>AJAX JDBC Example</h2>
+    <button onclick="sendData()">Send Data to Database</button>
+    <p id="response"></p>
+</body>
+</html>

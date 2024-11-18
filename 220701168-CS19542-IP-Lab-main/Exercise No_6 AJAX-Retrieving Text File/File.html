@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function loadXMLDoc()
+        {
+            var xml= new XMLHttpRequest();
+            xml.onreadystatechange=function()
+            {
+                if(xml.readyState==4&&xml.status==200)
+            {
+                document.getElementById('one').innerHTML=xml.responseText;
+            }
+        }
+        xml.open("GET","rec.txt",true);
+        xml.send();
+    }
+    </script>
+</head>
+<body>
+    <div id="one">
+        <h3>Hello Maha</h3>
+        <button onclick="loadXMLDoc()">Change</button>
+    </div>
+</body>
+</html>
